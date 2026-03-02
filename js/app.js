@@ -50,29 +50,48 @@ function updateCounts(){
 /* Approve / Reject logic */
 pendingContainer.addEventListener("click", function(e){
 
+    /* APPROVE */
     if(e.target.classList.contains("approve")){
 
         const card = e.target.closest(".request");
-        const name = card.querySelector("b").innerText;
-        const issue = card.querySelector("div").innerText.split("\n")[1];
-        const time = "Next Slot";
 
-        const row = document.createElement("tr");
-        row.innerHTML = `<td>${name}</td><td>${time}</td><td>${issue}</td>`;
+        // turn green
+        card.classList.add("approved");
 
-        patientTable.appendChild(row);
+        setTimeout(() => {
 
-        card.remove();
+            const name = card.querySelector("b").innerText;
+            const issue = card.querySelector("div").innerText.split("\n")[1];
+            const time = "Next Slot";
 
-        patientCount++;
-        pendingCount--;
-        updateCounts();
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${name}</td><td>${time}</td><td>${issue}</td>`;
+
+            patientTable.appendChild(row);
+
+            card.remove();
+
+            patientCount++;
+            pendingCount--;
+            updateCounts();
+
+        }, 650); // wait for animation
     }
 
+
+    /* REJECT */
     if(e.target.classList.contains("reject")){
-        e.target.closest(".request").remove();
-        pendingCount--;
-        updateCounts();
+
+        const card = e.target.closest(".request");
+
+        // turn red
+        card.classList.add("rejected");
+
+        setTimeout(() => {
+            card.remove();
+            pendingCount--;
+            updateCounts();
+        }, 650);
     }
 
 });
