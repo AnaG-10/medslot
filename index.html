@@ -1,70 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MediSlot Doctor Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<section class="dashboard">
 
-<body>
+    <!-- LEFT MAIN AREA -->
+    <div class="left-panel">
 
-<div class="container">
+        <div class="card large">
+            <h2>Pending Appointment Requests</h2>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2 class="logo">MediSlot</h2>
+            <div class="request">
+                <div>
+                    <b>Ravi Sharma</b><br>
+                    Fever & Cough
+                </div>
 
-        <ul class="menu">
-            <li class="active">Dashboard</li>
-            <li>Appointments</li>
-            <li>Patients</li>
-            <li>Prescriptions</li>
-            <li>Locations</li>
-            <li>Settings</li>
-        </ul>
-    </aside>
-
-    <!-- MAIN AREA -->
-    <main class="main">
-
-        <!-- TOP BAR -->
-        <header class="topbar">
-            <h1>Good Evening, Doctor</h1>
-
-            <input type="text" placeholder="Search patient..." class="search">
-
-            <div class="profile">
-                <img src="assets/profile.png">
-            </div>
-        </header>
-
-        <!-- CONTENT -->
-        <section class="content">
-
-            <div class="card">
-                <h3>Today's Appointments</h3>
-                <p>18 Patients Scheduled</p>
+                <div class="actions">
+                    <button class="approve">Approve</button>
+                    <button class="reject">Reject</button>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Pending Requests</h3>
-                <p>5 Waiting Approval</p>
+            <div class="request">
+                <div>
+                    <b>Anita Verma</b><br>
+                    Headache
+                </div>
+
+                <div class="actions">
+                    <button class="approve">Approve</button>
+                    <button class="reject">Reject</button>
+                </div>
             </div>
+        </div>
 
-            <div class="card">
-                <h3>Clinic Location</h3>
-                <p>Indiranagar (4PM - 7PM)</p>
-            </div>
 
-            <div class="card">
-                <h3>Recent Patient</h3>
-                <p>Ramesh Kumar - Fever</p>
-            </div>
+        <!-- PATIENT TABLE -->
+        <div class="card large">
+            <h2>Today's Patients</h2>
 
-        </section>
+            <table class="patient-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Issue</th>
+                </tr>
 
-    </main>
-</div>
+                <tr>
+                    <td>Ramesh Kumar</td>
+                    <td>4:00 PM</td>
+                    <td>Fever</td>
+                </tr>
 
-</body>
-</html>
+                <tr>
+                    <td>Sneha Patil</td>
+                    <td>4:20 PM</td>
+                    <td>Cold</td>
+                </tr>
+
+                <tr>
+                    <td>Vikram Singh</td>
+                    <td>4:40 PM</td>
+                    <td>Diabetes Follow-up</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE WIDGETS -->
+    <div class="right-panel">
+
+        <div class="stat">
+            <h3>Today's Load</h3>
+            <p class="big">18 Patients</p>
+        </div>
+
+        <div class="stat">
+            <h3>Available Slot</h3>
+            <p class="big">5 Remaining</p>
+        </div>
+
+        <div class="stat">
+            <h3>Clinic Location</h3>
+            <img src="assets/map_pin.png" class="pin">
+            <p>Indiranagar 4PM-7PM</p>
+        </div>
+
+    </div>
+
+</section>
