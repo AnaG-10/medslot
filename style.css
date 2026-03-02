@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#d8c4e8,#e9d8d8);
+}
+
+/* Layout */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:230px;
+    background:#f5eef6;
+    padding:25px;
+    border-radius:20px;
+    margin:20px;
+}
+
+.logo{
+    color:#6a4b8a;
+    margin-bottom:40px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.menu li:hover,
+.menu .active{
+    background:#e2d4eb;
+}
+
+/* Main Area */
+.main{
+    flex:1;
+    padding:25px;
+}
+
+/* Top bar */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.search{
+    padding:10px;
+    border-radius:20px;
+    border:none;
+    width:250px;
+}
+
+.profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+/* Cards grid */
+.content{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#5a4c66;
+    margin-bottom:10px;
+}
