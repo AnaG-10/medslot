@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Appointments</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">MediSlot</h2>
+
+        <ul class="menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li class="active"><a href="appointments.html">Appointments</a></li>
+            <li>Patients</li>
+            <li>Prescriptions</li>
+            <li>Locations</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <header class="topbar">
+            <h1>Appointment Slot Management</h1>
+        </header>
+
+        <section class="appointments-page">
+
+            <h2>Clinic Timings</h2>
+
+            <div class="slot-container">
+
+                <div class="slot">
+                    <div>
+                        <b>4:00 PM – 4:30 PM</b><br>
+                        Maximum 5 Patients
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" class="slotToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="slot">
+                    <div>
+                        <b>4:30 PM – 5:00 PM</b><br>
+                        Maximum 5 Patients
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" class="slotToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="slot">
+                    <div>
+                        <b>5:00 PM – 5:30 PM</b><br>
+                        Maximum 5 Patients
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" class="slotToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/slots.js"></script>
+
+</body>
+</html>
