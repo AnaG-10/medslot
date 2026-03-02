@@ -1,16 +1,41 @@
-const toggles = document.querySelectorAll(".slotToggle");
+document.addEventListener("DOMContentLoaded", function(){
 
-toggles.forEach((toggle, index) => {
+    /* SHOW TODAY DATE */
+    const dateBox = document.getElementById("todayDate");
+    if(dateBox){
+        dateBox.innerText = new Date().toDateString();
+    }
 
-    toggle.addEventListener("change", () => {
+    /* SLOT CAPACITY SYSTEM */
+    const slots = document.querySelectorAll(".slot");
 
-        const slotName = toggle.closest(".slot").querySelector("b").innerText;
+    slots.forEach(slot => {
 
-        if(toggle.checked){
-            alert(slotName + " is now AVAILABLE for booking");
-        }else{
-            alert(slotName + " is CLOSED for booking");
+        const max = parseInt(slot.dataset.max);
+        let booked = parseInt(slot.dataset.booked);
+
+        const capacityText = slot.querySelector(".capacity");
+        const fullTag = slot.querySelector(".fullTag");
+
+        function updateSlot(){
+            capacityText.innerText = `${booked} / ${max} Patients`;
+
+            if(booked >= max){
+                fullTag.innerText = "FULL";
+                fullTag.style.color = "red";
+            } else {
+                fullTag.innerText = "";
+            }
         }
+
+        updateSlot();
+
+        /* TEMP TEST BUTTON (for you) */
+        slot.addEventListener("dblclick", () => {
+            booked++;
+            slot.dataset.booked = booked;
+            updateSlot();
+        });
 
     });
 

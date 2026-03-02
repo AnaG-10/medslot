@@ -10,24 +10,24 @@
 
 <div class="container">
 
-    <div class="hamburger" id="hamburger">
-    ☰
-</div>
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">☰</div>
 
-<aside class="sidebar" id="sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
 
-    <h2 class="logo">MediSlot</h2>
+        <h2 class="logo">MediSlot</h2>
 
-    <ul class="menu">
-        <li><a href="index.html">Dashboard</a></li>
-        <li class="active"><a href="appointments.html">Appointments</a></li>
-        <li><a href="#">Patients</a></li>
-        <li><a href="#">Prescriptions</a></li>
-        <li><a href="#">Locations</a></li>
-        <li><a href="#">Settings</a></li>
-    </ul>
+        <ul class="menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li class="active"><a href="appointments.html">Appointments</a></li>
+            <li><a href="#">Patients</a></li>
+            <li><a href="#">Prescriptions</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
 
-</aside>
+    </aside>
 
     <!-- MAIN -->
     <main class="main">
@@ -40,12 +40,42 @@
 
             <h2>Clinic Timings</h2>
 
-            <div class="slot-container">
+            <!-- CONTROL PANEL -->
+            <div class="control-panel">
 
-                <div class="slot">
+                <div class="widget">
+                    <h3>Today's Date</h3>
+                    <p id="todayDate"></p>
+                </div>
+
+                <div class="widget">
+                    <h3>Doctor Status</h3>
+                    <p id="doctorStatus">Available</p>
+                    <button id="pauseClinic">Pause 15 min</button>
+                </div>
+
+                <div class="widget">
+                    <h3>Holiday Mode</h3>
+                    <button id="holidayBtn">Mark Today Holiday</button>
+                </div>
+
+                <div class="widget">
+                    <h3>Consultation Timer</h3>
+                    <p id="timer">08:00</p>
+                    <button id="startTimer">Start</button>
+                </div>
+
+            </div>
+
+            <!-- SLOT AREA -->
+            <div id="slotsArea">
+
+                <!-- SLOT 1 -->
+                <div class="slot" data-max="5" data-booked="0">
                     <div>
                         <b>4:00 PM – 4:30 PM</b><br>
-                        Maximum 5 Patients
+                        <span class="capacity">0 / 5 Patients</span><br>
+                        <span class="fullTag"></span>
                     </div>
 
                     <label class="switch">
@@ -54,10 +84,12 @@
                     </label>
                 </div>
 
-                <div class="slot">
+                <!-- SLOT 2 -->
+                <div class="slot" data-max="5" data-booked="0">
                     <div>
-                        <b>4:30 PM – 5:00 PM</b><br>
-                        Maximum 5 Patients
+                        <b>4:30 PM – 5:30 PM</b><br>
+                        <span class="capacity">0 / 5 Patients</span><br>
+                        <span class="fullTag"></span>
                     </div>
 
                     <label class="switch">
@@ -66,14 +98,16 @@
                     </label>
                 </div>
 
-                <div class="slot">
+                <!-- SLOT 3 -->
+                <div class="slot" data-max="5" data-booked="0">
                     <div>
-                        <b>5:00 PM – 5:30 PM</b><br>
-                        Maximum 5 Patients
+                        <b>5:30 PM – 6:30 PM</b><br>
+                        <span class="capacity">0 / 5 Patients</span><br>
+                        <span class="fullTag"></span>
                     </div>
 
                     <label class="switch">
-                        <input type="checkbox" class="slotToggle">
+                        <input type="checkbox" class="slotToggle" checked>
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -86,6 +120,7 @@
 
 </div>
 
+<!-- Scripts -->
 <script src="js/slots.js"></script>
 <script src="js/app.js"></script>
 
