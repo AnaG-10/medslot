@@ -18,7 +18,10 @@ body{
 
 .logo{
     color:#6a4b8a;
+    margin-top:55px;   /* creates space under hamburger */
     margin-bottom:40px;
+    font-size:22px;
+    font-weight:600;
 }
 
 .menu{
