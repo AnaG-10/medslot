@@ -189,3 +189,33 @@ body{
     width:38px;
     margin:10px 0;
 }
+
+/* Approval animation */
+.request.approved{
+    background:#c9f2d5;
+    border:2px solid #4CAF50;
+    animation:fadeOut 0.7s forwards;
+}
+
+/* Rejection animation */
+.request.rejected{
+    background:#ffd2d2;
+    border:2px solid #e53935;
+    animation:fadeOut 0.7s forwards;
+}
+
+/* fade animation */
+@keyframes fadeOut{
+    0%{
+        opacity:1;
+        transform:scale(1);
+    }
+    70%{
+        opacity:1;
+        transform:scale(1.03);
+    }
+    100%{
+        opacity:0;
+        transform:scale(0.95);
+    }
+}
