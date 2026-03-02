@@ -39,29 +39,89 @@
         </header>
 
         <!-- CONTENT -->
-        <section class="content">
+        <section class="dashboard">
 
-            <div class="card">
-                <h3>Today's Appointments</h3>
-                <p>18 Patients Scheduled</p>
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+        <!-- Pending Requests -->
+        <div class="card large">
+            <h2>Pending Appointment Requests</h2>
+
+            <div class="request" data-name="Ravi Sharma" data-issue="Fever" data-time="4:20 PM">
+                <div>
+                    <b>Ravi Sharma</b><br>
+                    Fever & Cough
+                </div>
+
+                <div class="actions">
+                    <button class="approve">Approve</button>
+                    <button class="reject">Reject</button>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Pending Requests</h3>
-                <p>5 Waiting Approval</p>
+            <div class="request" data-name="Anita Verma" data-issue="Headache" data-time="4:40 PM">
+                <div>
+                    <b>Anita Verma</b><br>
+                    Headache
+                </div>
+
+                <div class="actions">
+                    <button class="approve">Approve</button>
+                    <button class="reject">Reject</button>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Clinic Location</h3>
-                <p>Indiranagar (4PM - 7PM)</p>
-            </div>
+        </div>
 
-            <div class="card">
-                <h3>Recent Patient</h3>
-                <p>Ramesh Kumar - Fever</p>
-            </div>
+        <!-- Today's Patients -->
+        <div class="card large">
+            <h2>Today's Patients</h2>
 
-        </section>
+            <table class="patient-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+
+                <tbody id="todayPatients">
+                    <tr>
+                        <td>Ramesh Kumar</td>
+                        <td>4:00 PM</td>
+                        <td>Fever</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE STATS -->
+    <div class="right-panel">
+
+        <div class="stat">
+            <h3>Today's Load</h3>
+            <p class="big" id="patientCount">18 Patients</p>
+        </div>
+
+        <div class="stat">
+            <h3>Pending Requests</h3>
+            <p class="big" id="pendingCount">2 Waiting</p>
+        </div>
+
+        <div class="stat">
+            <h3>Clinic Location</h3>
+            <img src="assets/map_pin.png" class="pin">
+            <p>Indiranagar 4PM-7PM</p>
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 </div>
